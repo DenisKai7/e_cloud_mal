@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+.poppins {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+.playball {
+    font-family: "Playball", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
