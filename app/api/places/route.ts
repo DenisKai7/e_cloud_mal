@@ -2,28 +2,30 @@ import { NextResponse } from 'next/server';
 import { prismaClient } from '../../../database/database';
 
 type UserRequestBody = {
-  email: string;
-  username: string;
-  password: string;
+  name: string;
+  city: string;
+  address: string;
+  summerize: string;
 };
 
 export const POST = async (req: Request) => {
   try {
     const body: UserRequestBody = await req.json();
-    const { email, username, password } = body;
+    const { name, city, address, summerize } = body;
 
-    if (!email || !password) {
-        return NextResponse.json({ error: 'Missing email, or password' }, { status: 400 });
+    if (!body) {
+        return NextResponse.json({ error: 'name, city, or addres is could not null' }, { status: 400 });
     }
 
-      await prismaClient.user.create({
+      await prismaClient.place.create({
         data: {
-          email: email,
-          username: username,
-          password: password,  
+            name: name,
+            city: city,
+            address: address,
+            summerize: summerize
         },
       });
-      console.log('User saved:', { email });
+      console.log('User saved:', { name });
       return NextResponse.json({ message: 'User saved successfully' }, { status: 201 });
 
   } catch (error) {

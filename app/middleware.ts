@@ -11,5 +11,6 @@ export function middleware(request: NextRequest) {
 
 // Atur pattern untuk middleware hanya berjalan di rute yang diinginkan
 export const config = {
-  matcher: ['/api/register'],
+  matcher: ['/api/register', '/api/places' ],
+
 };
