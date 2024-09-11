@@ -11,7 +11,6 @@ const Hero = () => {
             <p>Come and try to enjoy the world
             that you never seen before</p>
         </div>
-        <Map />
     </div>  
   )
 }
