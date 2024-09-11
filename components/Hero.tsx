@@ -1,4 +1,7 @@
 import React from 'react'
+import dynamic from 'next/dynamic';
+
+const Map = dynamic(() => import('../components/Map'), { ssr: false });
 
 const Hero = () => {
   return (
@@ -8,6 +11,7 @@ const Hero = () => {
             <p>Come and try to enjoy the world
             that you never seen before</p>
         </div>
+        <Map />
     </div>  
   )
 }
