@@ -40,8 +40,8 @@ const Canvas = () => {
         layout="fill"
         objectFit="cover"
       />
-      <div className='w-full px-5 flex items-center justify-center text-white z-[1] bg-black h-full bg-opacity-65'>
-        <h1 className='playball text-white text-6xl select-none'>{names[currentIndex].name}</h1>
+      <div className='w-full px-5 pl-20 flex items-center justify-left text-white z-[1] bg-black h-full bg-opacity-65'>
+        <h1 className=' text-white text-6xl select-none font-bold'>SMART <br /><span className='text-yellow-600'>CITY</span></h1>
       </div>
       <div className='flex absolute bottom-10 gap-5 rounded-full py-1 px-2 z-[2]'>
         {images.map((_, slideIndex) => (
